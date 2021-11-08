@@ -118,3 +118,9 @@ https://tkg.io/
 ### 在GH60 Rev.B上的表现
 
 应该是主控芯片（atmage128）性能不足，在层切换时总有一些迟缓，特别是“层操作->开关”操作。
+
+### 配列数据的用法
+
+1. **Layer Data**中定义了每层中有哪些按键，用keyboard-layout-editor.com可以编辑
+2. tkg.io是配列二进制文件生成工具，将**Layer Data**一层一层复制到tkg.io中，再把**Keymap Data**信息用`工具-导入Fn设置`导入到工具中，再生成配列文件即可
+3. 用[tkg-toolkit](https://github.com/kairyu/tkg-toolkit)工具，把配列文件烧到键盘上
