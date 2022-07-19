@@ -43,23 +43,45 @@ Fn+A为小键盘模式开关。
 * Fn+E为组合键Ctrl+K，Eclipse快捷键“查找下一个”
 * 右下脚的Menu键其实根本用不到，但这个鸡肋键位也似乎没什么价值
 
-## Layer Data
+## Keymap
 
 Editor:
 http://www.keyboard-layout-editor.com/
 
+配列生成工具：
+https://tkg.io/
+
 L0
 
 ```
-["Fn2","!\n1","@\n2","#\n3","$\n4","%\n5","^\n6","&\n7","*\n8","(\n9",")\n0","_\n-","+\n=",{w:2},"Backspace"],
+["Esc","!\n1","@\n2","#\n3","$\n4","%\n5","^\n6","&\n7","*\n8","(\n9",")\n0","_\n-","+\n=",{w:2},"Backspace"],
 [{w:1.5},"Tab","Q","W","E","R","T","Y","U","I","O","P","{\n[","}\n]",{w:1.5},"|\n\\"],
 [{w:1.75},"Fn0","A","S","D","F","G","H","J","K","L",":\n;","\"\n'",{w:2.25},"Enter"],
 [{w:2.25},"Shift","Z","X","C","V","B","N","M","<\n,",">\n.","?\n/",{w:2.75},"RShift"],
 [{w:1.25},"Ctrl",{w:1.25},"Win",{w:1.25},"Alt",{w:6.25},"Space",{w:1.25},"Fn1",{w:1.25},"Caps Lock",{w:1.25},"Menu",{w:1.25},"RCtrl"]
-
 ```
 
-L1 方向键
+L1 Fn层
+
+```
+["~\n`","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12",{w:2},"Delete"],
+[{a:7,w:1.5},"",{a:4},"Fn8","Fn9","Fn10","Fn11","Fn12","Fn13","PgUp","↑","PgDn","PrtSc","Scroll Lock","Pause\nBreak",{w:1.5},"Insert"],
+[{a:7,w:1.75},"",{a:4},"Fn15","VolDn","VolUp","Mute","Fn16","Home","←","↓","→","backspace","Delete",{a:7,w:2.25},""],
+[{w:2.25},"",{a:4},"App","Fn17","Fn18","Fn19","Fn20","End","Fn21","Fn22","Fn23","Fn24",{a:7,w:2.75},""],
+[{w:1.25},"",{w:1.25},"",{w:1.25},"",{w:6.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},""]
+```
+
+L2 Fn层(空格为L1层开关)
+
+```
+["~\n`","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12",{w:2},"Delete"],
+[{a:7,w:1.5},"",{a:4},"Fn8","Fn9","Fn10","Fn11","Fn12","Fn13","PgUp","↑","PgDn","PrtSc","Scroll Lock","Pause\nBreak",{w:1.5},"Insert"],
+[{a:7,w:1.75},"",{a:4},"Fn15","VolDn","VolUp","Mute","Fn16","Home","←","↓","→","backspace","Delete",{a:7,w:2.25},""],
+[{w:2.25},"",{a:4},"App","Fn17","Fn18","Fn19","Fn20","End","Fn21","Fn22","Fn23","Fn24",{a:7,w:2.75},""],
+[{w:1.25},"",{w:1.25},"",{w:1.25},"",{a:4,w:6.25},"Fn2",{a:7,w:1.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},""]
+```
+
+L3 方向键
 
 ```
 [{a:7},"","","","","","","","","","","","","",{w:2},""],
@@ -69,58 +91,31 @@ L1 方向键
 [{a:7,w:1.25},"",{w:1.25},"",{w:1.25},"",{w:6.25},"",{w:1.25},"",{a:4,w:1.25},"←",{w:1.25},"↓",{w:1.25},"→"]
 ```
 
-L2  数字小键盘
+Fn设置
 
 ```
-[{a:7},"","","","","","","","","","","","","",{w:2},""],
-[{w:1.5},"","","","","","",{a:4},"-","&\n7","*\n8","(\n9","/",{a:7},"","",{w:1.5},""],
-[{w:1.75},"","","",{a:4},"-","+",{a:7},"",{a:4},"+","$\n4","%\n5","^\n6","*",{a:7},"",{w:2.25},""],
-[{w:2.25},"","","","","","",{a:4},">\n.","!\n1","@\n2","#\n3",{a:7},"",{w:2.75},""],
-[{w:1.25},"",{w:1.25},"",{w:1.25},"",{a:4,w:6.25},")\n0",{a:7,w:1.25},"",{w:1.25},"",{w:1.25},"",{w:1.25},""]
+"0":["ACTION_LAYER_MOMENTARY","1"],"1":["ACTION_LAYER_MOMENTARY","2"],"2":["ACTION_LAYER_TOGGLE","3"],"8":["ACTION_MODS_KEY","LR_LEFT",["MOD_ALT"],"KC_LEFT"],"9":["ACTION_MODS_KEY","LR_LEFT",["MOD_ALT"],"KC_RIGHT"],"10":["ACTION_MODS_KEY","LR_LEFT",["MOD_CTL"],"KC_K"],"11":["ACTION_NO"],"12":["ACTION_KEY","KC_EQUAL"],"13":["ACTION_NO"],"14":["ACTION_MODS_KEY","LR_LEFT",["MOD_SFT"],"KC_MINUS"],"15":["ACTION_KEY","KC_APPLICATION"],"16":["ACTION_MODS_KEY","LR_LEFT",["MOD_CTL","MOD_SFT"],"KC_ESCAPE"],"17":["ACTION_NO"],"18":["ACTION_KEY","KC_MINUS"],"19":["ACTION_NO"],"20":["ACTION_NO"],"21":["ACTION_NO"],"22":["ACTION_NO"],"23":["ACTION_NO"],"24":["ACTION_NO"]
 ```
 
-L3 Fn层
+> Fn0-Fn7，配列基本功能实现
+> Fn8开始，用户自定义功能，可根据需要自行修改
 
-```
-["~\n`","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12",{w:2},"Delete"],
-[{a:7,w:1.5},"",{a:4},"Fn8","Fn9","Fn10","Fn11","Fn12","Fn13","PgUp","↑","PgDn","PrtSc","Scroll Lock","Pause\nBreak",{w:1.5},"Fn14"],
-[{a:7,w:1.75},"",{a:4},"Fn15","VolDn","VolUp","Mute","Fn16","Home","←","↓","→","Insert","Delete",{a:7,w:2.25},""],
-[{w:2.25},"",{a:4},"App","Fn17","Fn18","Fn19","Fn20","End","Fn21","Fn22","Fn23","Fn24",{w:2.75},"RShift"],
-[{a:7,w:1.25},"",{w:1.25},"",{w:1.25},"",{a:4,w:6.25},"Space",{a:7,w:1.25},"",{a:4,w:1.25},"Caps Lock",{w:1.25},"Fn2",{w:1.25},"RCtrl"]
-```
-
-L4 Fn层(空格为L1层开关)
-
-```
-["~\n`","F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12",{w:2},"Delete"],
-[{a:7,w:1.5},"",{a:4},"Fn8","Fn9","Fn10","Fn11","Fn12","Fn13","PgUp","↑","PgDn","PrtSc","Scroll Lock","Pause\nBreak",{w:1.5},"Fn14"],
-[{a:7,w:1.75},"",{a:4},"Fn15","VolDn","VolUp","Mute","Fn16","Home","←","↓","→","Insert","Delete",{a:7,w:2.25},""],
-[{w:2.25},"",{a:4},"App","Fn17","Fn18","Fn19","Fn20","End","Fn21","Fn22","Fn23","Fn24",{w:2.75},"RShift"],
-[{a:7,w:1.25},"",{w:1.25},"",{w:1.25},"",{a:4,w:6.25},"Fn1",{a:7,w:1.25},"",{a:4,w:1.25},"Caps Lock",{w:1.25},"Fn2",{w:1.25},"RCtrl"]
-```
-
-## Keymap Data
-
-Keymap Generator:
-https://tkg.io/
-
-```
-"0":["ACTION_LAYER_MOMENTARY","3"],"1":["ACTION_LAYER_MOMENTARY","4"],"2":["ACTION_FUNCTION",0,0],"3":["ACTION_LAYER_INVERT",1,"ON_RELEASE"],"4":["ACTION_LAYER_INVERT","2","ON_RELEASE"],"8":["ACTION_MODS_KEY","LR_LEFT",["MOD_ALT"],"KC_LEFT"],"9":["ACTION_MODS_KEY","LR_LEFT",["MOD_ALT"],"KC_RIGHT"],"10":["ACTION_MODS_KEY","LR_LEFT",["MOD_CTL"],"KC_K"],"11":["ACTION_NO"],"12":["ACTION_KEY","KC_EQUAL"],"13":["ACTION_NO"],"14":["ACTION_MODS_KEY","LR_LEFT",["MOD_SFT"],"KC_MINUS"],"15":["ACTION_KEY","KC_APPLICATION"],"16":["ACTION_MODS_KEY","LR_LEFT",["MOD_CTL","MOD_SFT"],"KC_ESCAPE"],"17":["ACTION_NO"],"18":["ACTION_KEY","KC_MINUS"],"19":["ACTION_NO"],"20":["ACTION_NO"],"21":["ACTION_NO"],"22":["ACTION_NO"],"23":["ACTION_NO"],"25":["ACTION_NO"]
-```
-
-## 补充说明
-
-### Fn键定义说明
-
-* Fn0-Fn7，配列基本功能实现
-* Fn8开始，用户自定义功能，建议根据需要自行修改
-
-### 在GH60 Rev.B上的表现
-
-应该是主控芯片（atmage128）性能不足，在层切换时总有一些迟缓，特别是“层操作->开关”操作。
-
-### 配列数据的用法
+## 配列数据的用法
 
 1. **Layer Data**中定义了每层中有哪些按键，用keyboard-layout-editor.com可以编辑
-2. tkg.io是配列二进制文件生成工具，将**Layer Data**一层一层复制到tkg.io中，再把**Keymap Data**信息用`工具-导入Fn设置`导入到工具中，再生成配列文件即可
-3. 用[tkg-toolkit](https://github.com/kairyu/tkg-toolkit)工具，把配列文件烧到键盘上
+2. 将**Layer Data**一层一层复制到tkg.io中，再把Fn设置信息用`工具-导入Fn设置`导入，再生成配列文件
+3. 路线A.生成eep文件，用[tkg-toolkit](https://github.com/kairyu/tkg-toolkit)工具，把配列文件用[tkg-toolkit](https://github.com/kairyu/tkg-toolkit)烧到键盘上
+   路线B.生成c文件，替换tmk源码中"keyboard/gh60/keymap_noodlefighter.c"，重新编译烧录
+
+## 固件编译
+
+> tkg-toolkit中明明有编译好的固件，为什么要费力自己编译呢？
+> 最近发现tkg-toolkit中的固件烧上已经不能用了，编译最新的源码发现也不能用，原因不明
+> 所以，以防万一还是自己把源码fork一份，自己管理好版本，记录下使用方法，以防多年后找不到能用的固件..
+
+先参考[tmk的wiki](https://github.com/tmk/tmk_keyboard/wiki#build-on-linux)布置环境，然后执行：
+
+```
+$ git submodule update --init
+$ ./build_and_upload.sh
+```

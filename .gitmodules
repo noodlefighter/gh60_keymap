@@ -1,0 +1,6 @@
+[submodule "tkg-toolkit"]
+	path = tkg-toolkit
+	url = https://github.com/kairyu/tkg-toolkit.git
+[submodule "tmk_keyboard"]
+	path = tmk_keyboard
+	url = https://github.com/noodlefighter/tmk_keyboard.git
